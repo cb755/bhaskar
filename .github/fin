@@ -1,0 +1,47 @@
+import random
+import time
+
+class NFCDevice:
+    def _init_(self, device_id):
+        self.device_id = device_id
+    
+    # Simulating NFC communication by sending a "payment" signal
+    def communicate(self):
+        print(f"NFC Device {self.device_id}: Initiating Payment...")
+        time.sleep(1)
+        return random.choice([True, False])  # Randomly simulate success or failure
+
+# Wearable device simulates payment initiation
+class WearableDevice:
+    def _init_(self, user_id):
+        self.user_id = user_id
+        self.nfc_device = NFCDevice(device_id=self.user_id)
+    
+    def initiate_payment(self, amount):
+        print(f"User {self.user_id}: Trying to pay {amount}...")
+        if self.nfc_device.communicate():
+            print("Payment successful! Sending to payment processor...")
+            return self.send_to_payment_processor(amount)
+        else:
+            print("Payment failed: NFC communication error.")
+            return False
+    
+    def send_to_payment_processor(self, amount):
+        # Simulate sending payment details to a payment processor (e.g., Stripe, PayPal)
+        print(f"Sending payment of {amount} to payment processor...")
+        payment_status = random.choice(['Success', 'Failed'])  # Randomly simulate success or failure
+        if payment_status == 'Success':
+            print(f"Payment of {amount} was successful!")
+            return True
+        else:
+            print(f"Payment failed: {amount}")
+            return False
+
+# Simulate a wearable device performing a payment
+def main():
+    user_device = WearableDevice(user_id="User123")
+    amount = 50  # Payment amount in USD
+    user_device.initiate_payment(amount)
+
+if _name_ == "_main_":
+    main()
