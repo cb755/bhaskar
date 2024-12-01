@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biometric to UPI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    .watch {
+      width: 300px;
+      height: 300px;
+      background: black;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      color: white;
+    }
+    .screen {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .fingerprint {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(45deg, #3a3a3a, #606060);
+      border-radius: 50%;
+      margin: 20px 0;
+    }
+    .button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    .upi-confirm {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="watch">
+    <div class="screen">
+      <h2>Authenticate</h2>
+      <p>Place your finger on the scanner</p>
+      <div class="fingerprint"></div>
+<a href="payment success.html" class="button">Authentication</a>
+<a href="payment unsuccess.html" class="button">Cancel</a>
+     </div>
+  </div>     
+  </script>
+</body>
+</html>
