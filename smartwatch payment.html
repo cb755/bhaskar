@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartwatch Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        form label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+        form input[type="text"],
+        form input[type="number"],
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .note {
+            font-size: 12px;
+            color: #666;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .smartwatch-img {
+            display: block;
+            margin: 20px auto;
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smartwatch Payment</h1>
+       
+        <form action="process_payment.php" method="post">
+            <label for="amount">Enter Amount</label>
+            <input type="number" id="amount" name="amount" placeholder="500.00" step="0.01" required>
+
+            <label for="paymentMethod">Select Payment Method</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="upi">UPI</option>
+ 
+       
+            </select>
+
+            <a href="biometrics.html" class="button">Pay now</a>
+            
+        </form>
+        <p class="note">Ensure your smartwatch is synced for seamless payment.</p>
+    </div>
+</body>
+</html>
